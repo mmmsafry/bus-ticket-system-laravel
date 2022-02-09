@@ -20,6 +20,7 @@ class DatabaseSeeder extends Seeder
         //Bus::factory(10)->create();
         $this->call(BusSeeder::class);
         $this->call(StationSeeder::class);
+        $this->call(TokenSeeder::class);
 
     }
 }

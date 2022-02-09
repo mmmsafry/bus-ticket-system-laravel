@@ -31,3 +31,9 @@ php artisan serve
 ### POSTMAN
 After that, open POSTMAN `http://localhost:8080` run import ``api.postman.ticket-reservation-system.postman_collection.json`` and check the apis.
 
+
+### Note 
+I have implemented laravel passport for authentication, please follow the official docs for more info.
+
+```oauth-public.key```, ```oauth-public.key``` & ```.env``` files are shared via email (please download the attachment) 
+if you need please  copy the public and private keys to storage folder in the ````project_root/storage```` directory 
