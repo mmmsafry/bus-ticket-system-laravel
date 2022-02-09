@@ -23,7 +23,7 @@ Create Database ``villvay``
 
 ``php artisan migrate fresh --seed`` run this command to create the table
 
-update mysql credential in ``app\config\database.php``
+update mysql credential in ``.env``
 
 
 
