@@ -5,7 +5,11 @@ This application uses the laravel 8
 
 cloning repo
 ```bash
-git clone https://github.com/mmmsafry/
+Repo URL : https://github.com/mmmsafry/bus-ticket-system-laravel
+
+[ssh] git clone git@github.com:mmmsafry/bus-ticket-system-laravel.git
+or 
+[http] git clone https://github.com/mmmsafry/bus-ticket-system-laravel.git
 ```
 
 Install dependencies using composer
@@ -35,5 +39,16 @@ After that, open POSTMAN `http://localhost:8080` run import ``api.postman.ticket
 ### Note 
 I have implemented laravel passport for authentication, please follow the official docs for more info.
 
-```oauth-public.key```, ```oauth-public.key``` & ```.env``` files are shared via email (please download the attachment) 
+```bash
+php artisan passport:install
+```
+example output
+```
+Client ID: 6
+Client secret: tblKwZJCLxkwPOZgmWZ39XY2XYWVIwCg23OsUaS7
+```
+
+Please update the   ```"client_id"```, ```"client_secret"```, in the login request please update in order to authenticate
+
+```.env``` file are shared via email (please download the attachment) 
 if you need please  copy the public and private keys to storage folder in the ````project_root/storage```` directory 

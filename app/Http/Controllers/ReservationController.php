@@ -36,7 +36,7 @@ class ReservationController extends Controller
         ]);
 
         $input = $request->only(['date', 'bus_id', 'station_id_from', 'station_id_to']);
-        return Reservation::create(array_merge($input, ['created_at' => Auth::id()]));
+        return Reservation::create(array_merge($input, ['user_id' => Auth::id()]));
     }
 
     /**
@@ -80,7 +80,7 @@ class ReservationController extends Controller
      */
     public function getMyReservation()
     {
-        return Reservation::select('id', 'date', 'bus_id', 'station_id_from', 'station_id_To')
+        return Reservation::select('id', 'date', 'bus_id', 'station_id_from', 'station_id_To', 'user_id')
             ->where('user_id', Auth::id())
             ->with(['bus:id,name,vehicle_no', 'stationFrom:id,name', 'stationTo:id,name'])
             ->paginate();

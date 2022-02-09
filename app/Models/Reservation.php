@@ -13,11 +13,11 @@ class Reservation extends Model
     public $table = 'reservations';
 
     protected $fillable = [
-        'user_id',
         'bus_id',
         'date',
         'station_id_from',
         'station_id_to',
+        'user_id',
     ];
 
     /**

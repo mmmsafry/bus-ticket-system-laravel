@@ -1,0 +1,184 @@
+{
+	"info": {
+		"_postman_id": "1867a71b-e129-4cb0-a808-1c51c546164c",
+		"name": "api.postman.ticket-reservation-system",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Get My Reservation",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://localhost:8000/api/my-reservation",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"my-reservation"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Create Reservation",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJhdWQiOiI2IiwianRpIjoiZDE3ZDZjZmYxZmIzNzI3NmY5OWVhMzg1OWU5MDFhYjY5ZjQ3YzUxZGE2ZTAyNmY5ODRmZmE0YzlmODVhZWYwMDhlMWM4ZWQ1NmNiNzVjMzciLCJpYXQiOjE2NDQzOTA5MzMuNzY1OTI2LCJuYmYiOjE2NDQzOTA5MzMuNzY1OTI4LCJleHAiOjE2NzU5MjY5MzMuNzUyMDQ5LCJzdWIiOiIxMSIsInNjb3BlcyI6W119.gnnhniRzgiXQboGlS3zCBhA_AocpHYncVTkqNZK5WGN9vATjwet7-YaRN9rLbcncHb2pN-9ReMrrTKfsOQNGBnwo1OMBRxKUDA5u_usOfOc5tOK0-2pLDApDWePuWeGT89bnGsTSYS7_-qz7WSs107PrfdOEMjIcC3qilm7rXHMOtYAgQaNLSc13Xn6cFUKHQnOGSse7enUDDQwEBvTeaGQIG4q69eQJmH8HV0Isal3SAXZ7PXnuzHXe4UzdVNftQ5y50zC8vYEJ1xEtxU464Cnvei-ic_6A-hAM5WIxKAWIgGlrSsEqwWfGC8H_exe0wKLXfkFupdd0KWELF6u-2s_E8tMitUsqeWoONW7PMJB8bqm1OE6qQamhd7Uf39qsUcPqQ4Bm957OlLAq4Id8bAQvdw87NpaSgsiLEzfmSxdjE9A7BsGZiXN_L9aPd7RmM2a6YYysP-8nYtYe7WER5legghAAHxRwyydRJYDJtjeYiw9FgEVZGg6QdagxhOTlH-3keJXbEICZvKhURJ5Sbe5vD9n977oYX2_zc_EwsMSYxkkp3taCdGAJfKJzkil0BbHNFsLO72ELxOpYi-ba6sYH2yh_BGH0iJf1M4NSLWYYQ-_NgCL-gQEC9jnpwSlCR0cUMkFOmM57v3QpeYoUV1FIfgwJlZoN0MZR6RpJxdk",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"date\": \"2022-02-09 12:55:10\",\r\n    \"bus_id\": 1,\r\n    \"station_id_from\": 1,\r\n    \"station_id_to\": 2\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8000/api/reservation",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"reservation"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Registration",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"name\": \"Alax scot\",\r\n    \"username\": \"881230000V\",\r\n    \"password\": \"test@1234\",\r\n    \"password_confirmation\": \"test@1234\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8000/api/auth/register",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"auth",
+						"register"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Login",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://localhost:8000/api/auth/login",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"auth",
+						"login"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Login - oauth/token",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"type": "text"
+					},
+					{
+						"key": "",
+						"value": "password",
+						"type": "text",
+						"disabled": true
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"grant_type\" : \"password\",\r\n    \"client_id\" :2,\r\n    \"client_secret\":\"oOd53OHeWd5MvYuvtE6bwy6QWM0r8fgEfwTcl8Ae\",\r\n    \"username\" : \"881230000V\",\r\n    \"password\" : \"test@1234\",\r\n    \"scope\": \"\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8000/oauth/token",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"oauth",
+						"token"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}

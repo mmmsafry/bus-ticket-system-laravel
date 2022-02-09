@@ -17,10 +17,9 @@ class DatabaseSeeder extends Seeder
     public function run()
     {
         User::factory(10)->create();
-        //Bus::factory(10)->create();
         $this->call(BusSeeder::class);
         $this->call(StationSeeder::class);
-        $this->call(TokenSeeder::class);
+        //$this->call(TokenSeeder::class); provided via php artisan passport:install
 
     }
 }
